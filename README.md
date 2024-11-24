@@ -1,24 +1,7 @@
-# home-page-alpha
+# HomePage-α
 
-## Project setup
-```
-npm install
-```
+Yet another design for LengSC's home page.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Programmed by LengSC.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Inspired by [Xecades](https://github.com/Xecades).

@@ -1,18 +1,20 @@
+<script setup>
+import NavBar from '@/components/NavBar.vue';
+import InlineLink from '@/components/InlineLink.vue';
+</script>
+
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <NavBar />
+  <div class="content">
+    <div class="text">
+      <p>Hi, there! 🖖<br />this is LengSC.</p>
+      <p>Nothing special.</p>
+      <p>
+        If you try to contact LengSC, you will most likely experience a lengthy waiting time. Nevertheless, he will
+        certainly
+        try his best to get back to you!
+      </p>
+      <p>By the way, you can learn more <InlineLink to="/about">about</InlineLink> him here.</p>
+    </div>
   </div>
 </template>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
-</script>
