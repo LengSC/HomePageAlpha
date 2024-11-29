@@ -26,13 +26,15 @@ defineProps({
     </div>
     <div class="name">{{ name }}</div>
     <div class="social-links">
-      <a v-for="(link, platform) in links" :key="platform" :href="link.url"
-        class="social-link cursor" rel="noopener noreferrer" target="_blank">
+      <a v-for="(link, platform) in links" :key="platform" :href="link.url" class="social-link cursor"
+        rel="noopener noreferrer" target="_blank">
         <i :class="link.icon"></i>
         <span class="tooltip">{{ platform }}</span>
       </a>
     </div>
-    <p class="description"><slot /></p>
+    <p class="description">
+      <slot />
+    </p>
   </div>
 </template>
 

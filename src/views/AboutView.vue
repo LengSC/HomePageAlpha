@@ -20,7 +20,7 @@ import SocialCard from '@/components/SocialCard.vue';
       <p>
         Meet <b>LengSC</b> (/'leŋtsi/), or you might know him as <b>Albert</b>.
         <br />
-        He's an Earthling, hailing from our very own solar system!
+        <s>He's an Earthling apparently, hailing from our very own solar system!</s>
       </p>
       <p>
         Currently, he's studying in China.
@@ -38,8 +38,7 @@ import SocialCard from '@/components/SocialCard.vue';
         He has a keen interest in <b>computer science</b>, though he prefers not to label himself as a tech otaku.
         <br />
         He also enjoys reading <b>science fiction</b>, playing <b>badminton</b> with friends, and sometimes simply
-        gazing out
-        the window in peaceful <b>reflexion</b>.
+        gazing into space in peaceful <b>reflexion</b>.
       </p>
       <p> Ultimately, he's just an ordinary bloke, content with the little things in life. </p>
     </div>

@@ -7,7 +7,7 @@ import NavBar from '@/components/NavBar.vue';
   <div class="content">
     <div class="text">
       <p>LengSC's friends are truly remarkable, each possessing a soul full of charm and character!</p>
-      <p>But what does it truly mean to be a friend?</p>
+      <p>But you may have to keep in touch with them in person instead of online...?</p>
     </div>
   </div>
 </template>

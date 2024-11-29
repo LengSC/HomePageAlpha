@@ -9,7 +9,7 @@ const props = defineProps({
     type: String,
     required: true,
     default: "/",
-  } 
+  }
 });
 
 const titleSegs = props.title.split('.');
