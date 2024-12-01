@@ -40,7 +40,6 @@ nav {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
-  -webkit-user-select: none;
   user-select: none;
 }
 

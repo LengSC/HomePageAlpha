@@ -13,7 +13,11 @@ import SocialCard from '@/components/SocialCard.vue';
         'GitHub': { url: 'https://github.com/LengSC', icon: 'fab fa-github' },
         'Telegram': { url: 'https://t.me/AlbertLengSC', icon: 'fab fa-telegram' },
         'Email': { url: 'mailto:me@lengsc.xyz', icon: 'fas fa-envelope' },
-      }" />
+      }">
+        <InlineLink to="https://keys.openpgp.org/vks/v1/by-fingerprint/1BAF7CA8D9552574F5DD556388F97D8DC6674DAD">
+          1BAF 7CA8 D955 2574 F5DD 5563 88F9 7D8D C667 4DAD
+        </InlineLink>
+      </SocialCard>
     </div>
 
     <div class="text">

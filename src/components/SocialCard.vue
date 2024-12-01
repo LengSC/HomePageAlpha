@@ -1,4 +1,6 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+
 defineProps({
   name: {
     type: String,
@@ -17,10 +19,29 @@ defineProps({
     default: ''
   }
 });
+
+const card = ref(null);
+
+onMounted(() => {
+  const cardEle = card.value;
+  cardEle.addEventListener('mousemove', (e) => {
+    const left = cardEle.getBoundingClientRect().left, top = cardEle.getBoundingClientRect().top;
+    const w = cardEle.offsetWidth, h = cardEle.offsetHeight, k = 25;
+    const mouseX = e.clientX, mouseY = e.clientY;
+    const shadowX = Math.round((left + w / 2 - mouseX) / k);
+    const shadowY = Math.round((top + h / 2 - mouseY) / k);
+    cardEle.style.boxShadow = `${shadowX}px ${shadowY}px 10px ${Math.round(w / 2 / k)}px rgba(240, 240, 240, 0.8)`;
+    // const shadowX = Math.round((mouseX - (mouseX - left) * (k + 1) / k + w / 2 * (k + 1) / k) - (left + w / 2));
+    // const shadowY = Math.round((mouseY - (mouseY - top) * (k + 1) / k + h / 2 * (k + 1) / k) - (top + h / 2));
+  });
+  cardEle.addEventListener('mouseout', () => {
+    cardEle.style.boxShadow = 'none';
+  });
+});
 </script>
 
 <template>
-  <div class="social-card">
+  <div class="social-card" ref="card">
     <div class="avatar-container">
       <img :src="avatar" :alt="name" class="avatar" />
     </div>
@@ -40,11 +61,16 @@ defineProps({
 
 <style scoped>
 .social-card {
-  margin: 0 1.5rem;
+  margin: 1rem 1.5rem;
   padding: 1rem 2rem;
   width: auto;
   text-align: center;
-  box-shadow: 0.1rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  transition: scale 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.social-card:hover {
+  scale: 1.02;
 }
 
 .avatar-container {
@@ -54,6 +80,7 @@ defineProps({
   height: 9rem;
   width: 9rem;
   margin: 0.5rem auto;
+  user-select: none;
 }
 
 .avatar {
@@ -62,7 +89,7 @@ defineProps({
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0.2rem 0.2rem rgba(45, 60, 99, 0.3);
-  transition: transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1), box-shadow 0.3s ease-out;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .avatar:hover {

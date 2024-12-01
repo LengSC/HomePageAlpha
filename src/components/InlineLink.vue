@@ -33,7 +33,7 @@ const computedMode = props.mode ? props.mode : (isInSite ? "stay" : "blank");
 a {
   text-decoration: none;
   display: inline-block;
-  color: #6393d1;
+  color: #407e9d;
   background: linear-gradient(to right, #3a4f66, #304142) no-repeat center bottom;
   background-size: 0 1px;
   transition: all 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
