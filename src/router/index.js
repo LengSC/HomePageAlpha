@@ -5,6 +5,7 @@ import About from "@/views/AboutView.vue";
 import Links from "@/views/LinksView.vue";
 import Friends from "@/views/FriendsView.vue";
 import BigShots from "@/views/BigShotsView.vue";
+import Blogroll from "@/views/BlogrollView.vue";
 import NotFound from "@/views/NotFoundView.vue";
 
 import cur from "@/assets/js/cursor.js";
@@ -15,6 +16,7 @@ const routes = [
   { path: "/links", name: "Links", component: Links },
   { path: "/links/friends", name: "Friends", component: Friends },
   { path: "/links/big-shots", name: "BigShots", component: BigShots },
+  { path: "/links/blogroll", name: "Blogroll", component: Blogroll },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];
 

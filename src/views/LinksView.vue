@@ -11,9 +11,11 @@ import InlineLink from '@/components/InlineLink.vue';
       <p>
         Including:
         <br />
-        his close <InlineLink to="/links/friends">friends</InlineLink>,
+        his <InlineLink to="/links/friends">close friends</InlineLink>,
         <br />
         the <InlineLink to="/links/big-shots">big shots</InlineLink> in his eyes.
+        <br />
+        and the other <InlineLink to="/links/blogroll">charming souls!</InlineLink>
       </p>
     </div>
   </div>
